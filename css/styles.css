@@ -581,3 +581,125 @@ main {
   margin: 0 0 1rem;
   color: var(--muted);
 }
+
+.quality-prose {
+  max-width: 62ch;
+}
+
+.quality-prose h2 {
+  color: var(--text);
+}
+
+.quality-preview {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .quality-preview {
+    grid-template-columns: 1fr minmax(0, 1.05fr);
+  }
+}
+
+.quality-preview-figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #e2e8f0;
+  box-shadow: var(--shadow);
+}
+
+.quality-preview-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quality-preview-figure figcaption {
+  padding: 0.65rem 0.9rem 0.85rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.quality-gallery {
+  display: grid;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 720px) {
+  .quality-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.quality-figure {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.quality-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quality-figure figcaption {
+  padding: 1rem 1.15rem 1.15rem;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.quality-figure figcaption strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.button-primary,
+.button-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.15rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  margin-right: 0.65rem;
+  margin-bottom: 0.65rem;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+
+.button-primary:hover {
+  filter: brightness(1.06);
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+.button-ghost:hover {
+  border-color: var(--accent);
+}
+
+.quality-cta {
+  margin: 0;
+  padding-top: 0.25rem;
+}
